@@ -13,7 +13,7 @@ for(i = 0; i < rodadas; i++)
 {
     console.log(`\nInicio da rodada ${i + 1}`);
     let jogador1 = prompt("Jogador, selecione o que irá jogar: ");
-    if(jogador1 > 1 || jogador1 < 3 )
+    if(jogador1 > 1 && jogador1 < 3 )
     {
         console.log(`\nJogador selecionou ${escolhas[jogador1 - 1]} \n`);
         let COM = Math.floor(Math.random() * 3) + 1;
