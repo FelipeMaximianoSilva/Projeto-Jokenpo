@@ -4,11 +4,18 @@ var prompt = require('prompt-sync')();
 const escolhas = ["Tesoura", "Pedra", "Papel"];
 console.log("\n O jogo será Jokenpô, Para tomar suas decisões, utilize 1 para Tesoura, 2 para Pedra ou 3 para Papel \n");
 let inicio = prompt("Deseja iniciar o jogo? ");
+if(isNaN(inicio))
+{
 while(inicio.toUpperCase() == 'S' || inicio.toUpperCase() == 'SIM')
 {
 let vitjog = 0;
 let vitCOM = 0;
 let rodadas = prompt("Defina o número de rodadas que deseja jogar: ");
+while(isNaN(rodadas))
+{
+    console.log("Digito inválido, selecione um número de rodadas!");
+    rodadas = prompt("Defina o número de rodadas que deseja jogar: ");
+}
 for(i = 0; i < rodadas; i++)
 {
     console.log(`\nInicio da rodada ${i + 1}`);
@@ -83,5 +90,10 @@ else
         console.log("\nHOUVE UM EMPATE NA PARTIDA\n");
     }
     inicio = prompt("Deseja jogar novamente? ");
+}
+}
+else
+{
+    console.log("Parametro inválido!\nO jogo será encerrado.");
 }
 console.log("\nO Jogo acabou!");
