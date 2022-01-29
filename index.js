@@ -4,7 +4,7 @@ var prompt = require('prompt-sync')();
 const escolhas = ["Tesoura", "Pedra", "Papel"];
 console.log("\n O jogo será Jokenpô, Para tomar suas decisões, utilize 1 para Tesoura, 2 para Pedra ou 3 para Papel \n");
 let inicio = prompt("Deseja iniciar o jogo? ");
-while(inicio == 's' || inicio == 'sim' || inicio == 'SIM' || inicio == 'S')
+while(inicio.toUpperCase() == 'S' || inicio.toUpperCase() == 'SIM')
 {
 let vitjog = 0;
 let vitCOM = 0;
@@ -84,4 +84,4 @@ else
     }
     inicio = prompt("Deseja jogar novamente? ");
 }
-console.log("\nO Jogo acabou!")
+console.log("\nO Jogo acabou!");
