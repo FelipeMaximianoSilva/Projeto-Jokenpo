@@ -31,44 +31,15 @@ if(isNaN(inicio))
             {
                 console.log("\nEmpate");
             }
-            else if (jogador1 == 1)
+            else if (jogador1 == 1 && COM == 3 || jogador1 == 2 && COM == 1 || jogador1 == 3 && COM == 2)
             {
-                if(COM == 2)
-                {
-                    console.log("\nComputador venceu a rodada!\n");
-                    vitCOM++;
-                }
-                else
-                {
                     console.log("\nJogador venceu a rodada!\n");
                     vitjog++;
-                }
-            }
-            else if (jogador1 == 2)
-            {
-                if(COM == 3)
-                {
-                    console.log("\nComputador venceu a rodada!\n");
-                    vitCOM++;''
-                }
-                else
-                {
-                    console.log("\nJogador venceu a rodada!\n");
-                    vitjog++;
-                }
             }
             else
             {
-                if(COM == 1)
-                {
                     console.log("\nComputador venceu a rodada!\n");
                     vitCOM++;
-                }
-                else
-                {
-                    console.log("\nJogador venceu a rodada!\n");
-                    vitjog++;
-                }
             }
         }
         else
